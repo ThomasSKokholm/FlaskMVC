@@ -10,7 +10,6 @@ db = SQLAlchemy()
 
 
 def create_app(config_name):
-    # TODO https://flask.palletsprojects.com/en/1.1.x/config/#instance-folders
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_object(app_config[config_name])
     app.config.from_pyfile('../config.py')
