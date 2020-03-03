@@ -1,0 +1,7 @@
+
+
+https://scotch.io/tutorials/build-a-crud-web-app-with-python-and-flask-part-one
+
+For inspiration on making my readme.md's better ;-)
+https://github.com/CharlyJazz/Flask-MVC-Template
+
