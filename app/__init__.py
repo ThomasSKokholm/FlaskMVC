@@ -19,8 +19,8 @@ def create_app(config_name):
     bootstrap = Bootstrap(app)
 
     @app.route('/404')
-    def index_404():
-        return "Don't PANIC!"
+    def NoFound404():
+        return render_template("404.html")
 
     @app.route('/')
     def index():
