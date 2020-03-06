@@ -1,5 +1,7 @@
-{% extends 'bootstrap/base.html' %}
-
+<!doctype html>
+<head>
+    {{ bootstrap.load_css() }}
+</head>
 {% block title %}
     {% if title %}{{ title }} - FlaskMVC{% else %}Welcome to this FlaskMVC{% endif %}
 {% endblock %}
@@ -20,6 +22,7 @@
 {% endblock %}
 
 {% block content %}
+    {{ bootstrap.load_js() }}
 {% endblock %}
 
 
