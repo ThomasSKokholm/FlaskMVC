@@ -10,13 +10,13 @@ class DevConfig(Config):
     """Dev configs"""
     DEBUG = True
     SQLALCHEMY_ECHO = True
-    SQLALCHEMY_DATABASE_URI = 'sqlite:////sqlite_dev_db.db'
+    SQLALCHEMY_DATABASE_URI = 'sqlite:////tmp/sqlite_dev_db.db'
 
 
 class ProdConfig(Config):
     """For production"""
     DEBUG = False
-    SQLALCHEMY_DATABASE_URI = 'sqlite:////sqlite_db.db'
+    SQLALCHEMY_DATABASE_URI = 'sqlite:////tmp/sqlite_db.db'
 
 app_config = {
     'dev': DevConfig,
