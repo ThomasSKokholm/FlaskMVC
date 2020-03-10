@@ -7,19 +7,33 @@
 {% endblock %}
 
 {% block navbar %}
-    <nav class="navbar navbar-default">
-        <div class="container">
+    <nav class="navbar navbar-dark bg-dark navbar-fixed-top topnav">
+        <div class="container-fluid topnav">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#MyNavbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
-
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{ url_for('index') }}">Flask test</a>
+                <a class="navbar-brand topnav" href="{{ url_for('index') }}">Flask test</a>
+            </div>
+            <div class="collapse navbar-collapse" id="MyNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{{ url_for('home.homepage') }}">Home</a></li>
+                    <li><a href="#">Register</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
             </div>
         </div>
     </nav>
 {% endblock %}
+
+<div class="wrapper">
+    {% block body %}
+    {% endblock %}
+    <div class="push"></div>
+</div>
 
 {% block content %}
     {{ bootstrap.load_js() }}
